@@ -1,0 +1,130 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: cursive;
+    font-size: large;
+    font-weight: bolder;
+}
+
+body {
+    background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(140, 100%, 50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    overflow: hidden;
+}
+
+.clock {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 12;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock .num {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    z-index: 10;
+}
+
+.clock .hourHand {
+    width: 15px;
+    height: 35%;
+    background-color: black;
+}
+
+.clock .minHand {
+    width: 7px;
+    height: 42%;
+    background-color: black;
+}
+
+.clock .secHand {
+    width: 3px;
+    height: 46%;
+    background-color: red;
+}
+
+.clock .num1 {
+    transform: rotate(30deg);
+}
+
+.clock .num2 {
+    transform: rotate(60deg);
+}
+
+.clock .num3 {
+    transform: rotate(90deg);
+}
+
+.clock .num4 {
+    transform: rotate(120deg);
+}
+
+.clock .num5 {
+    transform: rotate(150deg);
+}
+
+.clock .num6 {
+    transform: rotate(180deg);
+}
+
+.clock .num7 {
+    transform: rotate(210deg);
+}
+
+.clock .num8 {
+    transform: rotate(240deg);
+}
+
+.clock .num9 {
+    transform: rotate(270deg);
+}
+
+.clock .num10 {
+    transform: rotate(300deg);
+}
+
+.clock .num11 {
+    transform: rotate(330deg);
+}
+
+.clock .num12 {
+    transform: rotate(360deg);
+}
